@@ -18,7 +18,7 @@ public:
             for(j=0;(i-j)>=0 && (i+j)<N && s[i-j]== s[i+j]; ++j) // odd-length substrings 
                 minCUTS[i+j+1] = min(minCUTS[i+j+1], 1 + minCUTS[i-j]);
 
-            for(j=0;(i-j-1)>=0 && (i+j)<N && s[i-j-1]== s[i+j]; ++j) // even-length substrings
+
                 minCUTS[i+j+1] = min(minCUTS[i+j+1], 1 + minCUTS[i-j-1]);
         }
         return minCUTS[N];
